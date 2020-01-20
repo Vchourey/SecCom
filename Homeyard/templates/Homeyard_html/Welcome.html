@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Home.css' %}">
+</head>
+<body>
+
+<div class="MenuBar">
+
+  <table class="menutab">
+    <tr>
+
+      <td><a href="">Home</a></td>
+      <td><a href="/mylearning/">Learning</a></td>
+      <td><a href="/marketlive/">Share Market</a></td>
+      <td><a href="/movies/">Movies</a></td>
+      <td><a href="/music/">Music</a></td>
+      <td><a href="/books/">Books</a></td>
+      <td><a href="/contact/">Contact</a></td>
+      <td><a href="/about/">About</a></td>
+
+      {% if user.is_authenticated %}
+        <td><a href="{% url 'homeyard:logout'%}">Logout</a></td>
+      {% else %}
+        <td><a href="{% url 'homeyard:userlogin'%}">Login</a></td>
+      {% endif %}
+    </tr>
+  </table>
+
+</div>
+<br>
+
+<p id="home"> Welcome to my home page </p><br>
+
+<div class="container">
+
+  <label  for="learning">Learning:</label>
+  <a href="/mylearning/"><img class="imagelink"  src="{% static 'images/Techpro.jpg' %}" width="300" height="300" alt="Opps image missing" id="learning"></a>
+
+  <label for="stock_market">Stock Market:</label>
+  <a href="/marketlive/"><img class="imagelink" src="{% static 'images/StockMarket.jpg' %}" width="300" height="300" alt="Opps image missing" id="stock_market"></a>
+
+  <label  for="books">Books :</label>
+  <a href="/books/"><img class="imagelink" src="{% static 'images/Books.jpg' %}" width="300" height="300" alt="Opps image missing" id="books"></a>
+
+  <label for="movies">Movies Hut:</label>
+  <a href="/movies/"><img class="imagelink" src="{% static 'images/Movie.jpg' %}"  width="300" height="300" alt="Opps image missing" id="movies"></a>
+
+  <label for="musics">Music Hub:</label>
+  <a href="/music/"><img class="imagelink" src="{% static 'images/Music.jpg' %}" width="300" height="300" alt="Opps image missing" id="musics"></a>
+
+
+
+</div>
+
+
+<br>
+<div class="BottomElements">
+  <a href="https://www.google.co.in/">Google Search</a>
+  <a id="facebookref" href="https://www.facebook.com/">Facebook</a>
+  <a href="https://www.rediff.com/">Rediff</a>
+  <a id="redtube" href="https://www.youtube.com">Youtube</a>
+  <a href="https://www.instagram.com">Intagram</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends "Market_html/main_market.html" %}
+
+    {% block title %}Live Share Market{% endblock %}
+
+{% block content %}
+     <h2>Welcome to the share market analysis</h2>
+        <br><br>
+
+      <h2>Below are the recently visited shares</h2>
+        <br><br>
+
+            <p>
+                <a href="{% url 'Mylearning:InterviewQuestion'%}">Click here for updating new interview questions </a>
+            </p>
+
+            <p>
+                <a href="{% url 'Mylearning:InterviewQuestionAnswer'%}">Click here for interview questions </a>
+            </p>
+{% endblock %}

@@ -1,0 +1,68 @@
+/* Styling the home page , Welcome page */
+
+*{     color: black; }
+
+
+body{
+        background: #006666;
+        font-family: "Arial";
+        font-size: 22px;
+
+    }
+
+#home{
+       text-align: center;
+       font-family:"cursive";
+       font-size: 1.5em;
+       font-weight: bold;
+       font-style: italic;
+
+       }
+
+.menutab{
+         margin:3px;
+         table-layout: fixed;
+         width: 1490px;
+
+        }
+
+td{ border: 2px solid gray; }
+
+.MenuBar{
+        background: #606060;
+        border-color: black;
+        border-width: thin;
+        border-style: solid;
+        position:fixed;
+
+
+    }
+
+.BottomElements{
+        border: 1px solid black;
+        font-size:20px;
+        text-align: center;
+        width: 97%;
+        padding:4px;
+        margin: 10PX;
+        position:fixed;
+        bottom:0;
+
+    }
+
+.imagelink{
+        border: 2px solid black;
+        margin: 5PX;
+        width: 40%;
+        bottom:20px;
+        transition: transform .2s;
+        opacity: 0.8;
+            }
+
+.imagelink:hover {
+  transform: scale(1.25);
+  opacity: 1;}
+
+#redtube{ color: red;}
+#facebookref{color: blue;}
+

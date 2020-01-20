@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>interviewQA</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Learn.css' %}">
+
+</head>
+<body>
+
+
+    <h1>welcome to interview QA Zone </h1>
+
+
+<p>The select subject below :</p>
+
+<form action="/action_page.php">
+  <select name="Subject">
+    {% for topics in questions %}
+    <option value="html">{{topics.subject}}</option>
+    {% endfor %}
+  </select>
+  <br><br>
+
+      <input type="submit">
+</form>
+<div class="listview">
+    {% for topics in questions %}
+    <a href=""> <ol value="">{{topics.subject}}</ol></a>
+    {% endfor %}
+</div>
+</body>
+</html>
+

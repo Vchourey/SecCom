@@ -1,0 +1,34 @@
+{% extends "book_html/Main_book.html" %}
+{% block title %}My Hello Page{% endblock %}
+{% block content %}
+
+    Hello World!!!<p>Today is {{today}}</p>
+    We are
+    {% if today.day == 1 %}
+
+    the first day of month.
+    {% elif today.day == 30 %}
+
+    the last day of month.
+    {% else %}
+
+    I don't know.
+    {%endif%}
+
+    <br>
+    <a>
+        {% for day in days_week %}
+       {{day}}
+    </a>
+        {% endfor %}
+
+    <br>
+    <b>
+        select book
+        {% for book in all_books %}
+        <li><a href="/books/{{book.id}}/">{{book.book_title|upper}}</a> </li>
+        {% endfor %}
+    </b>
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+/* Styling the home page , Welcome page */
+
+
+body{
+        background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkOaafg9Sv2Q2vx5kjwopIjBqmZ5UyZ12PdgzuI-0pEtPobQPb);
+/*        background-image: url("MLimage1.png");*/
+        background-repeat: repeat;
+        background-size: 1550px 800px;
+    }
+
+h4{
+
+        color: red;
+    }
+
+/*
+form{
+        background: #606060;
+    }
+*/
+
+h1{
+    color: #700822;
+    }
+
+span{
+        background: #c12222;
+        color: black;
+    }

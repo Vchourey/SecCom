@@ -1,0 +1,34 @@
+{% extends "Music_html/Main_music.html" %}
+{% block title %}My Hello Page{% endblock %}
+{% block content %}
+
+    This is First Music page
+
+
+        Hello World!!!<p>Today is {{today}}</p>
+        {% if today.day <= 7 %}
+        The first week of month
+
+        {% elif today.day >= 7 %}
+        not first week
+
+        {% else %}
+        not proper date
+
+        {%endif%}
+        <br>
+        <a>
+            {% for days in days_week %}
+            {{days}}
+        </a>
+        {% endfor %}
+
+        <br>
+        <b>
+            {% for album in all_albums %}
+            <li><a href="/music/{{ album.id }}/">{{album.title | upper}}</a> </li>
+            {% endfor %}
+        </b>
+
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "Movies_html/Main_movie.html" %}
+{% block title %}My Hello Page{% endblock %}
+{% block content %}
+
+     This is First Movies page
+
+
+
+        Hello World!!!<p>Today is {{today}}</p>
+        {% if today.day <= 7 %}
+        The first week of month
+
+        {% elif today.day >= 7 %}
+        not first week
+
+        {% else %}
+        not proper date
+
+        {%endif%}
+        <br>
+        <a>
+            {% for days in days_week %}
+            {{days}}
+        </a>
+        {% endfor %}
+        <br>
+        <b>
+            Select Movie
+            {% for movie in all_movie%}
+            <li><a href="/movies/{{movie.id}}/">{{movie.movie_title|upper}}</a> </li>
+        </b>
+        {% endfor %}
+
+{% endblock %}

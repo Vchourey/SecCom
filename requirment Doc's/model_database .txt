@@ -1,0 +1,90 @@
+
+Calibration_Service(Table)[universalinstruments, unitechinstruments]
+	A ) ELECTRO-TECHNICAL MEASUREMENTS
+		1) Voltmeter
+
+	 
+	B) THERMAL MEASUREMENTS
+		1) Temperature Indicator
+
+	 
+	C) MECHANICAL MEASUREMENTS
+		1) Pressure Gauge	 
+	 
+	D) PROCESS PARAMETER INSTRUMENTS
+		1) Digital Flow Indicator totalizer
+	 
+	ALSO VALIDATION OF EQUIPMENTS
+		1) Autoclave 
+		
+	E)Dimension 
+		PLAIN VERNIER CALIPER (PLAIN/DIAL/DIGITAL)
+
+	F) Electrical Calibration
+		TEMP.INDICATOR/CONTROLLER
+
+	G)Pressure Calibration
+		PRESSURE GAUGE
+		
+	H)Thermal-Humidity
+		DIGITAL THERMO-HYGRO METER
+	
+	I)Flow Meter
+		WATER FLOW METER
+		
+	j)Accoustics
+		SOUND LEVEL
+
+	K)Acceleration & Speed
+		ACCELEROMETER
+
+
+	L)Mass & Balance, Force
+		WEIGHTS BOX
+		
+	M)Torque
+		TORQUE WRENCH
+	N)Volume
+		MICROPIPETTE
+		
+=============================================
+
+Hydraulics_Pneumatics(Table)[saralaabhiyantriki, tilvas engineering works]
+	Hydeauclic facility
+	Pneumatics facility
+	list of companies
+		Fly Ash Brick Making Machine
+		Paver & Tile Machine
+		Industrial Machine
+
+
+=============================================
+AirConditioning_Refridgeration (table)[supcool.net, caplinks] 
+	type of AirConditioning
+	type of coolrs 
+	type of regridgrators
+	list of companies
+		cold storage
+		Ice companies 
+		
+============================================
+Instrumentation_Service(table)[mira:j, ]
+	Supply 
+	Installation
+	service
+	Testing
+	Commissioning
+	Calibration
+==========================================
+Control_Automation (table)[supertech]
+	service
+		Automation soluation 
+		batch management
+		Scada system
+		Iot soluation
+	supply
+		PLC, HMI 
+	Installation
+		PLC, SCADA, Controller 
+	
+	

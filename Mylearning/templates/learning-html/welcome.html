@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Techlearn</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Learn.css' %}">
+
+</head>
+<body>
+
+    <h4>
+        <a href="/mylearning/InterviewQuestion/"><span>Click here </span>for updating new interview questions </a>
+    </h4>
+
+    <h4>
+        <a href="{% url 'Mylearning:InterviewQuestionAnswer'%}"><span>Click here </span>for read interview questions </a>
+    </h4>
+
+    <h1>welcome to technology learning page </h1>
+    <p>Today's date: {{today}}<br>
+        Time now : {{timenow}}
+    </p>
+
+    <p>The select subject defines a drop-down list:</p>
+
+<form name="learningform" method="POST">
+
+    {% csrf_token %}
+
+   <select name="Intrest">
+    <option value="Reading">Learning/Reading</option>
+    <option value="Question">Interview questions</option>
+  </select>
+  <br><br>
+
+  <select name="Subject">
+    {% for topics in select_topics %}
+    <option value="top">{{topics | upper}}</option>
+    {% endfor %}
+  </select>
+  <br><br>
+
+  <input type="submit"  name="btn" value="submit">
+
+</form>
+
+    <h3> Learn Data Science </h3>
+    <img src="{% static 'images/DSimage.jpeg' %}" alt="Opps image missing">
+
+    <h3> Learn Machine Learning </h3>
+    <img src="{% static 'images/MLimage1.png' %}" alt="Opps image missing">
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IntQuestions</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Learn.css' %}">
+
+</head>
+<body>
+
+    <h1>welcome to interview question Zone </h1>
+
+
+<p>The select subject defines a drop-down list:</p>
+
+<form action="/action_page.php">
+  <select name="Subject">
+    {% for topics in select_topics %}
+    <option value="html">{{topics}}</option>
+    {% endfor %}
+  </select>
+  <br><br>
+
+    <p>Enter the question below :</p>
+
+    <textarea name="comment" >Enter the question here...</textarea>
+
+    <br><br>
+
+    <p>Enter the answer below:</p>
+
+    <textarea name="comment" >Enter the answer here...</textarea>
+
+    <br><br>
+
+  {% csrf_token %}
+  <input type="file" name="myfile">
+  <br><br>
+  <button type="submit">Upload</button>
+
+</form>
+<br><br>
+
+    {% if uploaded_file_url %}
+     <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+    {% endif %}
+
+
+<p><a href="http://127.0.0.1:8000/">Return to home</a></p>
+
+
+</body>
+</html>

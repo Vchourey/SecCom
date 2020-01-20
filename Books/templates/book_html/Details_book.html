@@ -1,0 +1,15 @@
+{% extends "book_html/Main_book.html" %}
+{% block title %}My Hello Page{% endblock %}
+{% block content %}
+
+    <p>Movie details:
+
+        <p><strong>book number :</strong> {{bookdetail.book_id}}</p>
+        <p><strong>Subject  :</strong> {{bookdetail.book_subject}}</p>
+        <p><strong>book title :</strong> {{bookdetail.book_title}}</p>
+        <p><strong>Writer  :</strong> {{bookdetail.book_author}}</p>
+
+
+    </p>
+
+{% endblock %}
