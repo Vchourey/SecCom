@@ -16,7 +16,7 @@
 - start_date: date
 
 
-### LISTING
+### Product
 - id: INT
 - realtor: INT (FOREIGN KEY [realtor])
 - title: STR
@@ -42,28 +42,13 @@
 - photo_6: STR
 
 
-### REALTOR
-- id: INT
-
-- name: STR
-- photo: STR
-- description: TEXT
-- email: STR
-- phone: STR
-- is_mvp: BOOL [0]
-- hire_date: DATE
-
-
 ### CONTACT
-- id: INT
-- user_id: INT
-- listing: INT
-- listing_id: INT
-- name: STR
+- branch_name: STR
+- address: TEXT
 - email: STR
-- phone: STR
-- message: TEXT
-- contact_date: DATE
+- phone: INT
+- mobile: INT
+- contact_Person: STR
 
 ### ENQUIRY
 - id: INT

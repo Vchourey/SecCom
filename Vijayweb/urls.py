@@ -20,6 +20,7 @@ from . import Homeview
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Homeyard.url')),
+    path('calibration/', include('Calibration.url')),
 #   path('', Homeview.home, name='home'),
     path('movies/', include('Movies.url')),
     path('music/', include('Music.url')),

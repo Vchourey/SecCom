@@ -16,18 +16,20 @@ class UserProfileInfo(models.Model):
 
 
 class CompanyServices(models.Model):
-    service_id = models.IntegerField()
-    service_name = models.CharField()
+
+    service_id = models.IntegerField(unique=True)
+    service_name = models.CharField(max_length=150)
     description = models.TextField()
-    service_had = models.CharField
+    service_had = models.CharField(max_length=150)
     contact = models.IntegerField()
     start_date = models.DateField()
 
 
-class CalibrationServices(models.Model):
+class ContactDetail(models.Model):
 
-    type = models.CharField(max_length=150, blank=False)
-    name = models.CharField(max_length=150, blank= False)
-    description = models.TextField()
-    start_date = models.DateField()
-
+    branch_name = models.CharField(max_length=150)
+    address = models.TextField()
+    email = models.EmailField()
+    phone = models.IntegerField()
+    mobile = models.IntegerField()
+    contact_Person = models.CharField(max_length=100)

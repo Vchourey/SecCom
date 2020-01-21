@@ -1,7 +1,7 @@
 {% load static %}
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-      <a class="navbar-brand" href="{% url 'index' %}">
+      <a class="navbar-brand" href=" ">
         <img src="{% static 'img/CHlogo.png' %}" class="logo" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
@@ -17,7 +17,7 @@
               class="nav-item mr-3"
             {% endif %}
           >
-            <a class="nav-link" href="{% url 'index' %}">Calibration Services</a>
+            <a class="nav-link" href="/calibration/">Calibration Services</a>
           </li>
           <li
             {% if '/' == request.path %}
@@ -26,7 +26,7 @@
               class="nav-item mr-3"
             {% endif %}
           >
-            <a class="nav-link" href="{% url 'index' %}">Instrument services </a>
+            <a class="nav-link" href="/calibration/">Instrument services </a>
           </li>
           <li
             {% if '/' == request.path %}
@@ -34,7 +34,7 @@
             {% else %}
               class="nav-item mr-3"
             {% endif %} >
-            <a class="nav-link" href="{% url 'index' %}">Hydraulic $ Pneumatic's</a>
+            <a class="nav-link" href="/calibration/">Hydraulic $ Pneumatic's</a>
           </li>
           <li
             {% if '/' == request.path %}
@@ -42,7 +42,7 @@
             {% else %}
               class="nav-item mr-3"
             {% endif %} >
-            <a class="nav-link" href="{% url 'index' %}">Automation services</a>
+            <a class="nav-link" href="/calibration/">Automation services</a>
           </li>
           <li
             {% if '/' == request.path %}
@@ -50,7 +50,7 @@
             {% else %}
               class="nav-item mr-3"
             {% endif %} >
-            <a class="nav-link" href="{% url 'index' %}">AirConditioning Service</a>
+            <a class="nav-link" href="/calibration/">AirConditioning Service</a>
           </li>
           <li
             {% if '/' == request.path %}
@@ -58,7 +58,7 @@
             {% else %}
               class="nav-item mr-3"
             {% endif %} >
-            <a class="nav-link" href="{% url 'index' %}">Media Gallery</a>
+            <a class="nav-link" href="/calibration/">Media Gallery</a>
           </li>
 
           <li
@@ -67,7 +67,7 @@
             {% else %}
               class="nav-item mr-3"
             {% endif %} >
-            <a class="nav-link" href="{% url 'index' %}">About Us</a>
+            <a class="nav-link" href="/calibration/">About Us</a>
           </li>
 
           <li

@@ -36,6 +36,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'Homeyard.apps.HomeyardConfig',
+    'Calibration.apps.CalibrationConfig',
     'Books.apps.BooksConfig',
     'Movies.apps.MoviesConfig',
     'Music.apps.MusicConfig',

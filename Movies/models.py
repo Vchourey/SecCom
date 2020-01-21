@@ -10,4 +10,4 @@ class Movies(models.Model):
     director = models.CharField(max_length=200)
 
     def __str__(self):
-        return "Movie name:" + self.movie_title +", category"+ self.movie_category+ ", directed by:" + self.director
+        return "Movie name:" + self.movie_title + ", category:" + self.movie_category + ", directed by:" + self.director

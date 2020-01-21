@@ -35,7 +35,7 @@ Calibration_Service(Table)[universalinstruments, unitechinstruments]
 	j)Accoustics
 		SOUND LEVEL
 
-	K)Acceleration & Speed
+	K)Acceleration And Speed
 		ACCELEROMETER
 
 
@@ -78,10 +78,10 @@ Instrumentation_Service(table)[mira:j, ]
 ==========================================
 Control_Automation (table)[supertech]
 	service
-		Automation soluation 
+		Automation solution
 		batch management
 		Scada system
-		Iot soluation
+		Iot solution
 	supply
 		PLC, HMI 
 	Installation
