@@ -1,0 +1,36 @@
+{% extends 'Homeyard_html/base.html' %}
+
+
+{% block title %} | Calibration Facility {% endblock %}
+
+{% block content %}
+
+ <!-- Listings -->
+  <section id="listings" class="py-5">
+    <div class="container">
+      <h3 class="text-center">Calibration List</h3>
+        <!-- Listing 1 -->
+<!--    <div class="row">   to reduce card width from right side -->
+            <div class="card">
+               <div class="row text-secondary pb-3">
+                   {% for unique_cali in unique_cali_type%}
+                       <div class="col-6">
+                         <i class="fas fa-clock"></i>
+                                <h5><strong>-></strong> {{unique_cali.cali_type}}</h5>
+                               {% for cali_list in selected_all_cali%}
+                                    <ul>
+                                        {% if cali_list.cali_type == unique_cali.cali_type%}
+                                          <p>{{cali_list.cali_name}}</p>
+                                          <p> {{cali_list.description}}</p>
+                                        {% endif %}
+                                    </ul>
+                               {% endfor %}
+                       </div>
+                   {% endfor %}
+               </div>
+            </div>
+
+    </div>
+  </section>
+
+{% endblock %}
