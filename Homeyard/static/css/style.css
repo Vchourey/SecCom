@@ -109,3 +109,116 @@ img {
             }
 .slide:hover {
   opacity: 1;}
+
+
+/* client image bar*/
+
+
+     .myimages {
+         display: flex;
+         overflow: hidden;
+         height: auto;
+         width: auto;
+         max-height: 35vw;
+         max-width: 35vw;
+         background: #333
+     }
+
+     .myimages img {
+         max-width: 100%;
+         vertical-align: middle;
+         border: 2px solid white;
+         box-sizing: border-box;
+         transition: opacity .2s
+     }
+
+     .myimages:hover img {
+         opacity: 0.5
+     }
+
+     .myimages img:hover {
+         opacity: 1
+     }
+
+     .first-column {
+         animation: var(--animation, none) 20s infinite linear
+     }
+
+     .first-column:hover {
+         animation-play-state: paused
+     }
+
+     .first-column:nth-of-type(odd) {
+         align-self: flex-end;
+         --direction: 50%
+     }
+
+     @keyframes slide {
+         to {
+             -webkit-transform: translateY(var(--direction, -50%));
+             transform: translateY(var(--direction, -50%))
+         }
+     }
+
+#toside {
+        opacity:0.9;
+        text-align:left; position:auto;
+        cursor:pointer;
+        display:none;
+        color:#ffd9a7;
+        font-size:20px;
+        font-weight:bold;,
+        }
+
+#toside:hover {
+  transform: scale(1.005);
+  opacity: 1;}
+
+
+/* index page CSS */
+
+.how-section1{
+    margin-top:-15%;
+    padding: 10%;
+}
+.how-section1 h4{
+    color: #ffa500;
+    font-weight: bold;
+    font-size: 30px;
+}
+.how-section1 .subheading{
+    color: #10284e;
+    font-size: 20px;
+}
+.how-section1 .row
+{
+    margin-top: 10%;
+}
+.how-img
+{
+    box-shadow: 0 0 8px 8px white inset;
+    text-align: center;
+}
+.how-img img{
+    box-shadow: 0 0 8px 8px white inset;
+    width: 100%;
+}
+
+
+sad
+{
+    display:block;
+    position:relative;
+
+}
+
+.sad:before
+{
+    display:block;
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    box-shadow: 0px 0px 25px 25px white inset, -30px -25px 25px 25px white inset;
+
+}

@@ -12,7 +12,9 @@
   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
   <!-- Custom -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-  <!-- Lightbox -->
+  <!-- home CSS file -->
+  <!--<link rel="stylesheet" type="text/css" href="{% static 'css/Home.css' %}"> -->
+  <!-- Light box -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/lightbox.min.css' %}">
 
 
@@ -31,12 +33,13 @@
   {% include 'Homeyard_html/_verticalbar.html'%}
   <!-- Main Content -->
   {% block content %} {% endblock %}
+
   <!-- Upper Footer -->
   {% include 'Homeyard_html/_upperfooter.html' %}
   <!-- Footer -->
   {% include 'Homeyard_html/_footer.html' %}
-  
 
+  <script src="{% static 'js/my.js' %} "></script>
   <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
   <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
   <script src="{% static 'js/lightbox.min.js' %} "></script>

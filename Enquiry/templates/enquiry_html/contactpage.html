@@ -1,0 +1,82 @@
+{% extends 'Homeyard_html/base.html' %}
+
+
+{% block title %} | Calibration Facility {% endblock %}
+
+{% block content %}
+
+
+<section class="contact py-5 " id="contact">
+<div class="container card bg-light">
+	<div class="row ">
+	    <div class="col-md-12">
+	        <h4 class="text-center">Contact Us</h4>
+		    <hr>
+	    </div>
+		<div class="col-md-6">
+		    <div class="address">
+                {% for contacts in contact%}
+                    <h5>Address:</h5>
+                    <h5>{{contacts.branch_name}}</h5>
+                        <p> {{contacts.address_line}}</p>
+                    <div class="email">
+                        <p><b> Email: </b> {{contacts.email}}</p>
+                    </div>
+                    <div class="phone">
+                        <p><b>Phone:</b> {{contacts.mobile}}</p>
+                        <p> {{contacts.contact_Person}}</p>
+                    </div>
+                    <hr>
+                {% endfor %}
+		    </div>
+		</div>
+		<div class="col-md-6">
+		    <div class="card">
+		        <div class="card-body">
+		             <form enctype="multipart/form-data" method="post">
+                         {% csrf_token %}
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <input id="id_company_enquire_name" name="company_enquire_name" placeholder="Enter Name/ Company" class="form-control" type="text" required="">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <input id="id_address_location" name="address_location" placeholder="Location/ City" class="form-control" type="text" required="">
+                            </div>
+                          </div>
+                         <div class="form-row">
+                             <div class="form-group col-md-6">
+                                <input id="id_phone" name="phone" placeholder="Mobile No." class="form-control" required="required" type="number">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <input type="email" name="email" class="form-control" id="id_email" placeholder="Email address" required="">
+                            </div>
+                          </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                      <select type="text" name="service_product" id="id_service_product" class="form-control" required="">
+                                        <option selected>Choose ...</option>
+                                        <option> Buyer</option>
+                                        <option> Service Enquiry</option>
+                                        <option> Complaint</option>
+                                        <option> Feedback</option>
+                                      </select>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                      <textarea id="id_requirements" name="requirements" cols="40" rows="5" placeholder="Describe here" class="form-control"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <input type="file" id="id_file" name="file" accept="image/*,.pdf">
+                            <input class="btn btn-secondary" type="submit" name="" value="Submit">
+                        </div>
+                    </form>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+</section>
+
+{% endblock %}

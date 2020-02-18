@@ -1,4 +1,5 @@
 {% extends 'Homeyard_html/base.html' %}
+{% load static %}
 
 
 {% block title %} | Welcome {% endblock %}
@@ -6,18 +7,82 @@
 {% block content %}
 <!-- Showcase -->
 
+<section>
+  <br>
+      <div class="container text-center">
+        <h2>INDUSTRIAL INSTRUMENTATION, CONTROLS AND AUTOMATION</h2>
+      </div>
+    <br>
+    <div class="how-section1">
+        <div class="container row">
+            <div class="col-md-6 how-img">
+                <div class="sad">
+                    <img src="{% static 'img/homes/instru2.jpg' %}" class="rounded-square img-fluid" alt=""/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h4>Instrumentation Service</h4>
+                            <h4 class="subheading">Our instrumentation to run and grow your business smoothly.</h4>
+            <p class="text-muted">We, Caliber Instrumentation service, are working in industry of instrument to provide wide range of instrumentation service to our industrial partners to ensure one stop solution at one place, We are supporting different verity of instruments fields like Biomedical instrument, electronic instruments , electrical instruments and mechanical instrument along with calibration</p>
+            </div>
+        </div>
+        <div class="container row">
+            <div class="col-md-6">
+                <h4>Calibration Service</h4>
+                            <h4 class="subheading">Our calibration to run and grow your business smoothly.</h4>
+                            <p class="text-muted">Streamlined hiring. GetLance’s sophisticated algorithms highlight projects you’re a great fit for.
+                                Top Rated and Rising Talent programs. Enjoy higher visibility with the added status of prestigious programs.
+                                Do substantial work with top clients. GetLance pricing encourages freelancers to use GetLance for repeat relationships with their clients.</p>
+            </div>
+            <div class="col-md-6 how-img">
+                <div class="sad">
+                    <img src="{% static 'img/homes/instru2.jpg' %}" class="rounded-square img-fluid" alt=""/>
+                </div>
+            </div>
+        </div>
+        <div class="container row">
+            <div class="col-md-6 how-img">
+                 <div class="sad">
+                    <img src="{% static 'img/homes/instru2.jpg' %}" class="rounded-square img-fluid" alt=""/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h4>Automation & Control Service </h4>
+                            <h4 class="subheading">Our automation services to run and grow your business smoothly.</h4>
+                            <p class="text-muted">We, Caliber industrial service company,we provide service support and solutions for the automation, electronics, instrumentation, electrical, and pneumatic environments. oue engineers are specialists in the areas of troubleshooting faults, we provide high-end automation systems like PLCs, SCADA, HMI, controllers, single loop digital controllers, temperature controllers We provides automation control products- PLCs, DCS, SCADA, HMI systems, Drives(VFD), Servo, Sensors, Transmitters,</p>
+            </div>
+        </div>
+        <div class="container row">
+            <div class="col-md-6">
+                <h4>Consulting services</h4>
+                            <h4 class="subheading">Our Consulting service's to run and grow your business smoothly.</h4>
+                            <p class="text-muted"> We Provide on call and online support our valuable customers to help and supports on field issue or our product, We support's for calibration ,Instrumentation, Automation service, Hydraulic & Pneumatic , Industrial AirConditioning.</p>
+            </div>
+            <div class="col-md-6 how-img">
+                <div class="sad">
+                    <img src="{% static 'img/homes/instru2.jpg' %}" class="rounded-square img-fluid" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--
 <section id="showcase">
     <div class="container text-center">
       <div class="home-search p-5">
         <div class="overlay p-5">
           <h1 class="display-4 mb-4">
             Property Searching Just Got So Easy
+            Our Other Activities :- Technical Services / Instrumentation Systems / Automation / Consultancy.
+
           </h1>
           <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quas, asperiores eveniet vel nostrum magnam
             voluptatum tempore! Consectetur, id commodi!</p>
           <div class="search">
             <form action="{% url 'index' %}">
-              <!-- Form Row 1 -->
+              <!-- Form Row 1
               <div class="form-row">
                 <div class="col-md-4 mb-3">
                   <label class="sr-only">Keywords</label>
@@ -39,7 +104,7 @@
                   </select>
                 </div>
               </div>
-              <!-- Form Row 2 -->
+              <!-- Form Row 2
               <div class="form-row">
                 <div class="col-md-6 mb-3">
                   <label class="sr-only">Bedrooms</label>
@@ -66,18 +131,20 @@
       </div>
     </div>
   </section>
+-->
+<!--
 <br>
-  <!-- Alerts -->
+  <!-- Alerts --
   {% include 'Homeyard_html/_alerts.html' %}
 
-  <!-- Listings -->
+  <!-- Listings --
   <section id="listings" class="py-5">
     <div class="container">
       <h3 class="text-center mb-3">Latest Listings</h3>
       <div class="row">
         {% if listings %}
           {% for listing in listings %}
-            <!-- Listing 1 -->
+            <!-- Listing 1 --
             <div class="col-md-6 col-lg-4 mb-4">
               <div class="card listing-preview">
                 <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
@@ -130,5 +197,9 @@
     </div>
   </section>
 
+-->
+
+  <!-- Client image bar-->
+  {% include 'Homeyard_html/client_html.html'%}
 
 {% endblock %}

@@ -16,8 +16,8 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 TEMPLATES_DIR = [os.path.join(BASE_DIR, 'templates')]
-STATIC_DIR = [os.path.join(BASE_DIR, 'static')]
-MEDIA_DIR = [os.path.join(BASE_DIR, 'media')]
+STATIC_DIR = (os.path.join(BASE_DIR, 'static'))
+MEDIA_DIR = (os.path.join(BASE_DIR, 'media'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -37,6 +37,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'Homeyard.apps.HomeyardConfig',
     'Calibration.apps.CalibrationConfig',
+    'Enquiry.apps.EnquiryConfig',
     'Books.apps.BooksConfig',
     'Movies.apps.MoviesConfig',
     'Music.apps.MusicConfig',
@@ -137,11 +138,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIR = [STATIC_DIR,]
+STATICFILES_DIR = STATIC_DIR
 
 # MEDIA
 MEDIA_URL = '/media/'
-MEDIA_ROOT = [MEDIA_DIR,]
+MEDIA_ROOT = MEDIA_DIR
 
 import os
 

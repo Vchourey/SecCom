@@ -6,7 +6,7 @@
 body{
         background: #006666;
         font-family: "Arial";
-        font-size: 22px;
+        font-size: 15px;
 
     }
 
@@ -65,4 +65,5 @@ td{ border: 2px solid gray; }
 
 #redtube{ color: red;}
 #facebookref{color: blue;}
+
 

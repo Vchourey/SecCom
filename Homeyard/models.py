@@ -21,15 +21,5 @@ class CompanyServices(models.Model):
     service_name = models.CharField(max_length=150)
     description = models.TextField()
     service_had = models.CharField(max_length=150)
-    contact = models.IntegerField()
-    start_date = models.DateField()
-
-
-class ContactDetail(models.Model):
-
-    branch_name = models.CharField(max_length=150)
-    address = models.TextField()
-    email = models.EmailField()
-    phone = models.IntegerField()
-    mobile = models.IntegerField()
-    contact_Person = models.CharField(max_length=100)
+    contact_had = models.IntegerField()
+    start_date = models.DateField(auto_now_add=True)

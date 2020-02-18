@@ -6,11 +6,40 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
+from Enquiry.form import UserEnquiryForm
 
 
 def index(request):
 
-    return render(request, 'Homeyard_html/index.html', )
+    user_enquiry = UserEnquiryForm()
+
+    if request.method == "POST":
+
+        enquiry = UserEnquiryForm(request.POST, request.FILES)
+
+        if enquiry.is_valid():
+
+            user_enq = enquiry.save(commit=False)
+
+            try:
+                user_enq.file = request.FILES['file']
+
+            except:
+                return render(request, 'enquiry_html/ThankYou.html', {})
+
+            finally:
+                user_enq.save()
+
+        else:
+            print(user_enquiry.errors)
+
+        return render(request, 'enquiry_html/ThankYou.html', {})
+
+    else:
+        user_enquiry = UserEnquiryForm()
+
+    return render(request, 'Homeyard_html/index.html', {'user_form': user_enquiry})
+
 
 def homeyard(request):
 

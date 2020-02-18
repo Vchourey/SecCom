@@ -21,6 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Homeyard.url')),
     path('calibration/', include('Calibration.url')),
+    path('enquiry/', include('Enquiry.url')),
+    path('contact/', include('Enquiry.url')),
 #   path('', Homeview.home, name='home'),
     path('movies/', include('Movies.url')),
     path('music/', include('Music.url')),
