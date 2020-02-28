@@ -1,10 +1,25 @@
 {% extends 'Homeyard_html/base.html' %}
-
+{% load static %}
 
 {% block title %} | Calibration Facility {% endblock %}
 
 {% block content %}
 
+<div class="how-section1">
+        <div class="container row">
+            <div class="col-md-6 how-img">
+                <div class="sad">
+                    <img src="{% static 'img/homes/instru2.jpg' %}" class="rounded-square img-fluid" alt=""/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h4>Calibration Services</h4>
+            <p style="text-align: justify;">We, Caliber Instrumentation service, are working in industry of instrument to provide wide range of instrumentation service to our industrial partners to ensure one stop solution at one place, We are supporting different verity of instruments fields like Biomedical instrument, electronic instruments , electrical instruments and mechanical instrument along with calibration and industrial automation activities to ensure our clients to provide all services together.
+			As well we are supplier and provider or all kind of instruments requires for industries like flow meters, measurement instruments, calibrator , transmitter/isolator, controller at attractive price range along with our technical services, installation and service.
+			we provide our service and supply products to various  process industries like  chemical, fertilizer, cement, steel, pharmaceutical, food, pulp & paper, petrochemical, automobile, etc. with high quality consultancy, consistency, accuracy of its products, and on-time delivery at good price.
+			</div>
+        </div>
+</div>
  <!-- Listings -->
   <section id="listings" class="py-5">
     <div class="container">
@@ -12,16 +27,16 @@
         <!-- Listing 1 -->
 <!--    <div class="row">   to reduce card width from right side -->
             <div class="card">
-               <div class="row text-secondary pb-3">
+               <div class="row text pb-3">
                    {% for unique_cali in unique_cali_type%}
                        <div class="col-6">
-                         <i class="fas fa-clock"></i>
+                         <i class="fas fa-tags"></i>
                                 <h5><strong>-></strong> {{unique_cali.cali_type}}</h5>
                                {% for cali_list in selected_all_cali%}
                                     <ul>
                                         {% if cali_list.cali_type == unique_cali.cali_type%}
                                           <p>{{cali_list.cali_name}}</p>
-                                          <p> {{cali_list.description}}</p>
+                                          <p style="text-align: justify;"> {{cali_list.description}}</p>
                                         {% endif %}
                                     </ul>
                                {% endfor %}
